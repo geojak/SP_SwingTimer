@@ -76,23 +76,11 @@ loc["enUS"] = {
 		Cleave = "Cleave",
 		Slam = "Slam",
 		RS = "Raptor Strike",
-		Maul = "Maul"
+		Maul = "Maul",
+		HolyS = "Holy Strike"
 	}
 }
-loc["frFR"] = {
-	hit = "Vous touchez",
-	crit = "Vous infligez un coup critique",
-	glancing = "érafle",
-	block = "bloqué",
-	Warrior = "Guerrier",
-	combatSpells = {
-		HS = "Frappe héroïque",
-		Cleave = "Enchainement",
-		Slam = "Heurtoir",
-		RS = "Attaque du raptor",
-		Maul = "Mutiler"
-	}
-}
+
 local L = loc[GetLocale()];
 if (L == nil) then 
 	L = loc['enUS']; 
@@ -169,12 +157,12 @@ local function UpdateAppearance()
 	
 	SP_ST_Frame:SetPoint("TOPLEFT", SP_ST_GS["x"], SP_ST_GS["y"])
 	SP_ST_maintimer:SetPoint("RIGHT", "SP_ST_Frame", "RIGHT", -2, 0)
-	SP_ST_maintimer:SetFont("Fonts\\FRIZQT__.TTF", SP_ST_GS["h"]-6)
+	SP_ST_maintimer:SetFont("Fonts\\FRIZQT__.TTF", SP_ST_GS["h"])
 	SP_ST_maintimer:SetTextColor(1,1,1,1);
 
 	SP_ST_FrameOFF:SetPoint("TOPLEFT", "SP_ST_Frame", "BOTTOMLEFT", 0, -2);
 	SP_ST_offtimer:SetPoint("RIGHT", "SP_ST_FrameOFF", "RIGHT", -2, 0)
-	SP_ST_offtimer:SetFont("Fonts\\FRIZQT__.TTF", SP_ST_GS["h"]-6)
+	SP_ST_offtimer:SetFont("Fonts\\FRIZQT__.TTF", SP_ST_GS["h"])
 	SP_ST_offtimer:SetTextColor(1,1,1,1);
 
 	if (SP_ST_GS["icons"] ~= 0) then
