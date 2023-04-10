@@ -244,7 +244,9 @@ end
 local function ShouldResetTimer(off)
 	local timer = st_timer;
 	if (off) then timer = st_timerOff end
-
+	
+	if GetWeaponSpeed(off) == nil return false end
+	
 	local percentTime = timer / GetWeaponSpeed(off)
 	return (percentTime < 0.025)
 end
@@ -376,11 +378,8 @@ end
 local function UpdateDisplay()
 	local style = SP_ST_GS["style"]
 	if (st_timer <= 0) then
-		if style == 2 or style == 4 or style == 6 then
-			--nothing
-		else
-			SP_ST_FrameTime:Hide()
-		end
+		
+		SP_ST_maintimer:SetText(nil);
 
 		if (not combat and not configmod) then
 			SP_ST_Frame:Hide()
