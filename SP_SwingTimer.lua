@@ -245,7 +245,7 @@ local function ShouldResetTimer(off)
 	local timer = st_timer;
 	if (off) then timer = st_timerOff end
 	
-	if GetWeaponSpeed(off) == nil return false end
+	if GetWeaponSpeed(off) == nil then return false end
 	
 	local percentTime = timer / GetWeaponSpeed(off)
 	return (percentTime < 0.025)
