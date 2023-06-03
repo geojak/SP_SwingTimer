@@ -17,4 +17,4 @@ This spammable macro will only cast Slam if the swing timer has just been reset 
 
 ### Download
 
-[Download ZIP](https://github.com/EinBaum/SP_SwingTimer/releases "Download ZIP")
+[Download ZIP](https://github.com/geojak/SP_SwingTimer/archive/refs/heads/master.zip)
