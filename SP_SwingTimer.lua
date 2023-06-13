@@ -306,7 +306,7 @@ local function CheckDamageSource(dmg, dmgType)
 			['Mage']	= 1923,
 		};
 		local unitClass = UnitClass("target");
-		local armor = basearmor[unitClass];
+		local armor = unitClass and basearmor[unitClass] or basearmor['Warrior'];
 		for i=1,16 do
 			debuffTexture, debuffApplications = UnitDebuff("target", i);
 			if (has_value(armorDebuffs,debuffTexture)) then
